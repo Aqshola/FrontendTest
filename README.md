@@ -1,4 +1,4 @@
-# [FindDesg](https://#/) - React SPA for finishing Frontend Engineer Test
+# [FindDesg](https://#/) - React SPA for finishing Frontend Engineer Test build using ReactJS and TailwindCSS
 
 ## How to run
 
