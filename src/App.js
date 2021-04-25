@@ -1,7 +1,7 @@
-import DesignerList from './components/pages/DesignerList';
-import Landing from './components/pages/Landing';
+import DesignerList from './Components/pages/DesignerList';
+import Landing from './Components/pages/Landing';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/elements/Nav';
+import Nav from './Components/elements/Nav';
 
 function App() {
   return (
