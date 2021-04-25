@@ -1,11 +1,27 @@
 import { useEffect, useState } from 'react';
 import ContactCard from '../elements/ContactCard';
-import PageButton from '../elements/PageButton';
+import Pagination from '../elements/Pagination';
+
 import { getPersonList } from '../../helper/getPerson';
+import { useLocation } from 'react-router-dom';
 
 export default function DesignerList() {
   const [personList, setpersonList] = useState([]);
 
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+
+  const getQuery = useQuery();
+
+  const filterPost = (data, currPage) => {
+    const indexOfLastPost = currPage * 10;
+    const indexOfFirstPost = indexOfLastPost - 10;
+
+    let postperPage = [];
+    postperPage = data.slice(indexOfFirstPost, indexOfLastPost);
+    return postperPage;
+  };
   useEffect(() => {
     const getData = async () => {
       const res = await getPersonList();
@@ -21,7 +37,7 @@ export default function DesignerList() {
         Designer List
       </h1>
       <div className="flex justify-around mt-20 flex-wrap w-full md:w-4/5 mx-auto">
-        {personList.map((person) => (
+        {filterPost(personList, getQuery.get('page') || 1).map((person) => (
           <ContactCard
             name={person.name.first + ' ' + person.name.last}
             email={person.email}
@@ -32,10 +48,11 @@ export default function DesignerList() {
           />
         ))}
       </div>
-      <div className="flex justify-center space-x-3">
-        <PageButton active={true}>1</PageButton>
-        <PageButton>2</PageButton>
-      </div>
+      <Pagination
+        postPerPage={10}
+        totalPost={personList.length}
+        page={getQuery.get('page') || 1}
+      />
     </div>
   );
 }

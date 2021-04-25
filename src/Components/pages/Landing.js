@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export default function Landing(params) {
   return (
     <>
-      <div className="max-w-screen-xl flex flex-col md:flex-row mx-auto items-center box-content p-5 md:p-20">
-        <div className="mt-10  flex flex-col w-full  space-y-6 order-2 md:order-1 md:mt-0 md:w-2/4">
+      <div className="max-w-screen-xl flex flex-col md:flex-row mx-auto items-center box-content p-5 md:p-20 mt-10 md:mt-0">
+        <div className="flex flex-col w-full  space-y-6 order-2 md:order-1  md:w-2/4">
           <h1 className="text-3xl text-center md:text-left md:text-5xl opensans font-bold text-primary">
             FindDesg
           </h1>
@@ -30,7 +30,7 @@ export default function Landing(params) {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto p-5 md:p-10 min-h-screen items-center flex flex-col md:flex-row">
+      <div className="mt-10  max-w-screen-xl mx-auto p-5 md:p-10 min-h-screen items-center flex flex-col md:flex-row md:mt-0">
         <div className="flex flex-col space-y-5 w-full md:w-2/4 text-center md:text-left">
           <h1 className="poppins text-4xl font-semibold w-96 text-primary">
             We Provide You The Best Designer Around the world
