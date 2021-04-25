@@ -1,12 +1,17 @@
 import Button from './Button';
 
-export default function ContactCard() {
+export default function ContactCard({ name, location, email, phone, photo }) {
   return (
     <div className="flex flex-col p-5 shadow-lg mb-10 w-full rounded-lg">
       <div className="flex items-center space-x-2">
-        <div className="bg-gray-400 h-20 w-20 rounded-full"></div>
+        <img
+          className=" flex h-20 w-20 rounded-full"
+          src={photo}
+          alt="profile"
+          loading="lazy"
+        />
         <div className="flex-col flex-grow">
-          <h1 className="text-xl poppins font-bold">John Doe</h1>
+          <h1 className="text-lg poppins font-bold max-w-md">{name}</h1>
           <div className="flex text-lg poppins">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +24,7 @@ export default function ContactCard() {
                 clipRule="evenodd"
               />
             </svg>
-            <p className="poppins">Indonesia</p>
+            <p className="poppins text-sm">{location}</p>
           </div>
         </div>
         <Button className="poppins p-3 border-2 border-purple-500">
@@ -42,7 +47,7 @@ export default function ContactCard() {
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             />
           </svg>
-          <p className="poppins">John@example.com</p>
+          <p className="poppins">{email}</p>
         </div>
         <div className="flex space-x-2">
           <svg
@@ -58,7 +63,7 @@ export default function ContactCard() {
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
             />
           </svg>
-          <p className="poppins">0812345678</p>
+          <p className="poppins">{phone}</p>
         </div>
       </div>
     </div>

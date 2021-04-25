@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Landing(params) {
   return (
     <>
-      <div className="max-w-screen-xl flex flex-col md:flex-row mx-auto items-center box-content p-5 md:p-10">
+      <div className="max-w-screen-xl flex flex-col md:flex-row mx-auto items-center box-content p-5 md:p-20">
         <div className="mt-10  flex flex-col w-full  space-y-6 order-2 md:order-1 md:mt-0 md:w-2/4">
           <h1 className="text-3xl text-center md:text-left md:text-5xl opensans font-bold text-primary">
             FindDesg
