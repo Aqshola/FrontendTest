@@ -6,10 +6,10 @@ https://frontend-test-steel.vercel.app/
 
 ## How to run
 
--Clone repo
--Extract
--Run yarn install
--enjoy the web
+-Clone repo <br/>
+-Extract <br/>
+-Run yarn install <br/>
+-enjoy the web <br/>
 
 ## available route
 
