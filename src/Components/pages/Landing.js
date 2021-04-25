@@ -1,4 +1,5 @@
 import DummyCard from '../elements/DummyCard';
+import Button from '../elements/Button';
 import { Link } from 'react-router-dom';
 
 export default function Landing(params) {
@@ -9,13 +10,13 @@ export default function Landing(params) {
           <h1 className="text-3xl text-center md:text-left md:text-5xl opensans font-bold text-primary">
             FindDesg
           </h1>
-          <h4 className="text-xl text-center md:text-2xl md:text-left poppins w-96 ">
+          <h4 className="text-xl text-center md:text-2xl md:text-left poppins w-full  md:w-96">
             Find your own designer for your project
           </h4>
           <Link to="/designer" className="flex justify-center md:justify-start">
-            <button className="p-3 w-max border-primary font-medium border-2 rounded-lg poppins hover:shadow-lg transition-all transform hover:-translate-y-2 focus:outline-none focus:bg-primary focus:text-white outline-none">
+            <Button className="p-3 w-max border-primary font-medium border-2 rounded-lg poppins hover:shadow-lg transition-all transform hover:-translate-y-2 focus:outline-none focus:bg-primary focus:text-white outline-none">
               Browse Designer
-            </button>
+            </Button>
           </Link>
         </div>
         <div className="w-full md:w-2/4 order-1 md:order-2">
@@ -32,7 +33,7 @@ export default function Landing(params) {
       </div>
       <div className="mt-10  max-w-screen-xl mx-auto p-5 md:p-10 min-h-screen items-center flex flex-col md:flex-row md:mt-0">
         <div className="flex flex-col space-y-5 w-full md:w-2/4 text-center md:text-left">
-          <h1 className="poppins text-4xl font-semibold w-96 text-primary">
+          <h1 className="poppins text-4xl font-semibold w-full md:w-96 text-primary">
             We Provide You The Best Designer Around the world
           </h1>
           <h4 className="poppins text-xl w-full md:w-96">
